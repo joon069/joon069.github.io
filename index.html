@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Helvetica Neue:wght@300;400;700&display=swap"
+    />
+    <link rel="icon" href="./spotify.png" />
+    <script src="./main.js"></script>
+    <title>Spotify - Web Player: Music for everyone</title>
+  </head>
+  <audio id="audioPlayer" style="display: none">
+    <source src="./music/Ditto – 250 Remix.mp3" type="audio/mp3" />
+    브라우저가 오디오를 지원하지 않습니다.
+  </audio>
+  <body>
+    <div class="afterloginbody">
+      <div class="container">
+        <div class="musictable">
+          <div class="sidebar-top">
+            <div class="top-container">
+              <div class="top">
+                <div class="library-container">
+                  <div class="mylibrarybtn">
+                    <img
+                      class="putinsidel-icon"
+                      alt=""
+                      src="./public/images/put-in-side-l.svg"
+                    />
+                  </div>
+                  <div class="div">
+                    <div class="div1">내 라이브러리</div>
+                  </div>
+                </div>
+                <div class="navbtn">
+                  <div class="createbtn">
+                    <div class="frame-parent">
+                      <img
+                        class="frame-child"
+                        alt=""
+                        src="./public/images/plus.svg"
+                      />
+
+                      <div class="div2">만들기</div>
+                    </div>
+                  </div>
+                  <div class="fullscreenbtn">
+                    <img
+                      class="fullscreen-icon"
+                      alt=""
+                      src="./public/images/full-screen.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn1">
+              <div class="playlistbtn">
+                <div class="div3">플레이리스트</div>
+              </div>
+              <div class="artistbtn">
+                <div class="div3">아티스트</div>
+              </div>
+              <div class="albumbtn">
+                <div class="div3">앨범</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-table">
+            <div class="album">
+              <div class="album-child">
+                <img src="./public/images/NewJeans2.png" alt="" />
+              </div>
+              <div class="title-parent">
+                <div class="title">NJWMX</div>
+                <div class="parent">
+                  <div class="div6">앨범</div>
+                  <div class="frame-item"></div>
+                  <div class="s">NewJeans</div>
+                </div>
+              </div>
+            </div>
+            <div class="artist">
+              <div class="artist-child">
+                <img src="./public/images/NewJeansIMG.png" alt="" />
+              </div>
+              <div class="title-parent">
+                <div class="title">NewJeans</div>
+                <div class="wrapper">
+                  <div class="div6">아티스트</div>
+                </div>
+              </div>
+            </div>
+            <div class="playlist">
+              <div class="album-child">
+                <img src="./public/images/KDH.png" alt="" />
+              </div>
+              <div class="title-parent">
+                <div class="title">KDH</div>
+                <div class="parent">
+                  <div class="div6">플레이리스트</div>
+                  <div class="frame-item"></div>
+                  <div class="unknown">준영</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebarsearch">
+              <div class="searching-wrapper">
+                <img
+                  class="searching-icon"
+                  alt=""
+                  src="./public/images/ReadingTool.svg"
+                />
+              </div>
+              <div class="resentlybtn">
+                <div class="div9">최근</div>
+                <img
+                  class="chart-icon"
+                  alt=""
+                  src="./public/images/Chart.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-section">
+          <div class="main-nav">
+            <div class="mainbtn">
+              <div class="frame">
+                <div class="div10">모두</div>
+              </div>
+              <div class="frame-div">
+                <div class="div10">음악</div>
+              </div>
+              <div class="btn">
+                <div class="div10">팟케스트</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-container">
+            <div class="dailycard">
+              <div class="sec-name">
+                <b class="title3">NJWMX</b>
+                <div class="sec-name-child">
+                  <img
+                    class="sec-name-child-img"
+                    src="./public/images/mainNewJeans.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="sec-name">
+                <b class="title3">How It's Done</b>
+                <div class="sec-name-child">
+                  <img
+                    class="sec-name-child-img"
+                    src="./public/images/mainKDH.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="sec-name">
+                <b class="title3">NewJeans</b>
+                <div class="sec-name-child">
+                  <img
+                    class="sec-name-child-img"
+                    src="./public/images/mainNewJeans2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="sec-name">
+                <b class="title3">Golden</b>
+                <div class="sec-name-child">
+                  <img
+                    class="sec-name-child-img"
+                    src="./public/images/mainKDH.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="playlistsuggestsuggesttitle">
+              <div class="btn2">
+                <div class="div13">최근 활동 기준 추천</div>
+                <div class="div14">
+                  <div class="div15">최근 들은 음악 기반 추천</div>
+                </div>
+              </div>
+              <div class="alllook">
+                <div class="smalltext">
+                  <div class="div16">모두 표시</div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll">
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/1img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        찬란하고도 아련한 느낌을 간직한 한국 시티팝을 즐...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/2img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">솔로여도 괜찮은 나를 위한 노래들</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/3img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy mysterious and dreamy music as if...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/4img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy the BOYNEXTDOOR...
+                        <span style="color: white"> ...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/5img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy theTWICE fan meeting [HOME...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/6img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy the tripleS WORLD TOUR [triple...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/7img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy the IVE Seoul concert LIVE SET ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/8img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy the LE <br />SSERAFIM WORLD...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll/9img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy the KISS OF LIFE tour concert LIVE SE...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basictitle">
+              <div class="btn2">
+                <div class="div13"></div>
+                <div class="div14">
+                  <div class="More">NewJeans과(와)비슷한 아티스트 더 찾기</div>
+                </div>
+              </div>
+              <div class="alllook">
+                <div class="smalltext">
+                  <div class="div16">모두 표시</div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll1">
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll1/1img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        This Is XG. The<br />essential tracks from...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll1/2img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Enjoy iconic K-Pop<br />choreography and hi...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll1/3img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Workout to K-Pop? Count me in! (Cover:...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll1/4img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Need to get your energy level up? This...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll1/5img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        2024년 대한민국을 빛낸 트랙들을 만나보세요!(...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basictitle1">
+              <div class="btn2">
+                <div class="div13"></div>
+                <div class="div14">
+                  <div class="div15">최근 재생한 항목</div>
+                </div>
+              </div>
+              <div class="alllook">
+                <div class="smalltext">
+                  <div class="div16">모두 표시</div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll2">
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/1img.jpg" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">NewJeans</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/2img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">KDH</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/2img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        KPop Demon Hunters<br />(Soundtrack from the...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/3img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">NJWMX</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/2img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">How It's Done</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/4img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">업비트 믹스</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/5img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">NewJeans</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/6img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">NewJeans 'Super Shy'</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/7img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">teen beats</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/8img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">K-Pop Gaming</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/9img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        알게뭐야 지금 내가 신나<br />는데
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/10img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">My Gaming<br />Songs: Oner</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/11img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">Melon Top 100</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/12img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        Lose My Mind (feat.<br />Doja Cat)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistsuggest">
+                <div class="listitem">
+                  <div class="backgroundshadow">
+                    <img src="./public/images/scroll2/12img.png" alt="" />
+                  </div>
+                  <div class="link">
+                    <div class="linkcontainer">
+                      <div class="title7">
+                        F1-Official Movie Soundtrack Playlist
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-container">
+          <div class="video-container">
+            <div class="video">
+              <img src="./public/images/mainNewJeans.png" alt="" />
+            </div>
+          </div>
+          <div class="detailpages">
+            <div class="detailpagesbar-parent">
+              <div class="detailpagesbar">
+                <div class="detailpages-title">
+                  <div class="title-wrapper">
+                    <div class="title36">Ditto (250 Remix)</div>
+                  </div>
+                </div>
+                <div class="detailpagesbar-inner">
+                  <div class="artist-wrapper">
+                    <div class="artist1">Artist</div>
+                  </div>
+                </div>
+              </div>
+              <div class="copybtn">
+                <img class="copy-icon" alt="" src="./public/images/copy.svg" />
+              </div>
+              <div class="interestedinbtn">
+                <img
+                  class="interested-icon"
+                  alt=""
+                  src="./public/images/interested-in-btn.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="detail-bar">
+            <div class="pages">
+              <img
+                class="putinsidel-icon"
+                alt=""
+                src="public/images/put-in-side-r.svg"
+              />
+            </div>
+            <div class="titletext">
+              <div class="title36">Title</div>
+            </div>
+            <div class="detailnav">
+              <div class="detailbtn">
+                <div class="elseBTN">
+                  <img
+                    class="elsebtn-icon"
+                    alt=""
+                    src="./public/images/else.svg"
+                  />
+                </div>
+                <div class="fullscreenbtn1">
+                  <img
+                    class="fullscreen-icon"
+                    alt=""
+                    src="./public/images/full-screen.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header">
+          <div class="header-container">
+            <div class="logo">
+              <div class="nav-logo">
+                <img class="logoIMG" alt="" src="./public/images/LOGO.svg" />
+              </div>
+            </div>
+            <div class="searchbox">
+              <div class="homebtn-container">
+                <img
+                  class="homebtn-icon"
+                  alt="HOME"
+                  src="./public/images/home.svg"
+                />
+              </div>
+
+              <div class="search-container">
+                <div class="search-box">
+                  <div class="readingglasses-container">
+                    <img
+                      class="readingglasses-icon"
+                      alt="Searcher"
+                      src="./public/images/large-searching.svg"
+                    />
+                  </div>
+                  <div class="search-text">
+                    <div class="div25">어떤 콘텐츠를 감상하고 싶으세요?</div>
+                  </div>
+                  <div class="verticalborder">
+                    <img
+                      class="button-browse"
+                      alt=""
+                      src="./public/images/watcher.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn6">
+              <div class="permiumbtn-parent">
+                <div class="permiumbtn">
+                  <div class="premium">Premium 둘러보기</div>
+                </div>
+                <div class="downloadbtn">
+                  <img
+                    class="download-icon"
+                    alt=""
+                    src="./public/images/Download.svg"
+                  />
+
+                  <div class="container1">
+                    <b class="b">
+                      <span class="txt">앱 설치하기 </span>
+                    </b>
+                  </div>
+                </div>
+              </div>
+              <div class="alarm-parent">
+                <div class="alarm">
+                  <img
+                    class="alarm-icon"
+                    alt=""
+                    src="./public/images/alarm.svg"
+                  />
+                </div>
+                <div class="alarm">
+                  <img
+                    class="friends-icon"
+                    alt=""
+                    src="./public/images/friends.svg"
+                  />
+                </div>
+              </div>
+              <div class="profile">
+                <div class="profileimg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="scorllbar"></div>
+          <div class="scrollbar"></div>
+        </div>
+        <div class="playlistnav">
+          <div class="playlistnav-container">
+            <div class="playbar-cintainer">
+              <div class="playbar">
+                <div class="div26">0:00</div>
+                <div class="playbar1">
+                  <div class="playbar2">
+                    <div class="playbaract"></div>
+                  </div>
+                  <div class="playbtn"></div>
+                </div>
+                <div class="div27">3:21</div>
+              </div>
+              <div class="shuffle-container-parent">
+                <div class="shuffle-container">
+                  <div class="iconcover">
+                    <img
+                      class="iconcover"
+                      alt=""
+                      src="./public/images/shuffle.svg"
+                    />
+                  </div>
+                </div>
+                <div class="beforebtn-container">
+                  <div class="fullscreen-icon">
+                    <img
+                      class="fullscreen-icon"
+                      alt=""
+                      src="./public/images/before.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="play-button-container">
+                <div class="play-button">
+                  <img
+                    class="play-btn-2-icon"
+                    alt=""
+                    src="./public/images/play-btn-2.svg"
+                  />
+                </div>
+              </div>
+              <div class="frame-group">
+                <div class="next-wrapper">
+                  <div class="next">
+                    <img
+                      class="skipafter-icon"
+                      alt=""
+                      src="./public/images/next.svg"
+                    />
+                  </div>
+                </div>
+                <div class="next-wrapper">
+                  <div class="againcover">
+                    <div class="again">
+                      <img
+                        class="again-icon"
+                        alt=""
+                        src="./public/images/again.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="musicinfobar">
+              <div class="musicthumbnail">
+                <img
+                  class="miniCard"
+                  src="./public/images/mainNewJeans.png"
+                  alt=""
+                />
+              </div>
+              <div class="music_title-text">Ditto (250 Remix)</div>
+              <div class="newjeans">NewJeans</div>
+              <div class="interestedinbtn1">
+                <img
+                  class="interested-icon1"
+                  alt=""
+                  src="./public/images/interested-in-btn.svg"
+                />
+              </div>
+            </div>
+            <div class="utility-container">
+              <div class="nowplay">
+                <img
+                  class="nowplay-icon"
+                  alt=""
+                  src="./public/images/act-detail.svg"
+                />
+              </div>
+              <div class="mic">
+                <img class="mic-icon" alt="" src="./public/images/mic.svg" />
+              </div>
+              <div class="playlist-btn">
+                <img
+                  class="playlist-btn-icon"
+                  alt=""
+                  src="./public/images/play-table.svg"
+                />
+              </div>
+              <div class="connect">
+                <img
+                  class="connect-icon"
+                  alt=""
+                  src="./public/images/connect.svg"
+                />
+              </div>
+              <div class="soundbar">
+                <div class="volume">
+                  <img
+                    class="volume-icon"
+                    alt=""
+                    src="./public/images/volume.svg"
+                  />
+                </div>
+                <div class="sound-bar"></div>
+              </div>
+              <div class="miniplayer">
+                <img
+                  class="miniplayer-icon"
+                  alt=""
+                  src="./public/images/miniplayer.svg"
+                />
+              </div>
+              <div class="full">
+                <img class="full-icon" alt="" src="./public/images/full.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
